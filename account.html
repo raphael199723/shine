@@ -1,0 +1,256 @@
+<html lang="en"><head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta content="width=device-width, initial-scale=1.0" name="viewport"/>-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<!-- For iOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon_m/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Noti Monkeys">
+
+<!-- For Android -->
+<!-- For Android -->
+<script>
+    // Get the current URL
+    var currentURL = window.location.href;
+
+    // Create the web app manifest object
+    var manifest = {
+        "name": "Noti Monkeys",
+	    "short_name": "Noti Monkeys",
+	    "start_url": currentURL,
+	    "icons": [
+	        {
+	            "src": "images/android-chrome-192x192.png",
+	            "type": "image/png",
+	            "sizes": "192x192"
+	        }
+	    ],
+	    "theme_color": "#ffffff",
+	    "background_color": "#ffffff",
+	    "display": "standalone"
+    };
+
+    // Convert the manifest object to JSON string
+    var manifestString = JSON.stringify(manifest);
+
+    // Create a link element for the manifest
+    var manifestLink = document.createElement('link');
+    manifestLink.rel = 'manifest';
+    manifestLink.href = 'data:application/json,' + encodeURIComponent(manifestString);
+
+    // Append the link element to the head of the document
+    document.head.appendChild(manifestLink);
+</script><link rel="manifest" href="data:application/json,%7B%22name%22%3A%22Noti%20Monkeys%22%2C%22short_name%22%3A%22Noti%20Monkeys%22%2C%22start_url%22%3A%22https%3A%2F%2Fwww.notimonkeys.com%2Fmaster_panel%2Fdashboard.php%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22images%2Fandroid-chrome-192x192.png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22sizes%22%3A%22192x192%22%7D%5D%2C%22theme_color%22%3A%22%23ffffff%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22display%22%3A%22standalone%22%7D">
+<meta name="theme-color" content="#ffffff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Noti Monkeys">
+<link rel="icon" sizes="192x192" href="img/logo.png">
+<title>Shine Language House App</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/components-rounded.css" rel="stylesheet" type="text/css">
+<link href="css/plugins.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css?v=2" rel="stylesheet" type="text/css">
+<link href="css/light.css?v=2" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="img/favicon.png">
+<link href="css/layout_addon.css?v=2" rel="stylesheet" type="text/css">		<link href="plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css" rel="stylesheet" type="text/css">
+<link href="css/dataTables.colReorder.min.css" rel="stylesheet" type="text/css">
+<link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">	<style type="text/css">.rm-draggable-icon[data-v-ec2bf3d2]{position:absolute;right:0;z-index:999999999}.rm-draggable-icon__header[data-v-ec2bf3d2]{width:100%;display:flex;flex-direction:row;justify-content:flex-end;align-items:center;cursor:pointer}.rm-draggable-icon__close-btn[data-v-ec2bf3d2]{width:18px;height:18px;margin:0 0 2px 0}.rm-draggable-icon__main[data-v-ec2bf3d2]{cursor:pointer}.rm-draggable-icon__icon-label[data-v-ec2bf3d2]{display:flex;flex-direction:column;justify-content:center;align-items:center;width:60px;height:60px;border-top-left-radius:20px;border-bottom-left-radius:20px;background-color:#fff;text-align:center;box-shadow:0 2px 6px 1px rgba(0,0,0,.15);color:#0d1216;-moz-user-select:none;-webkit-user-select:none;user-select:none}.rm-draggable-icon__icon-label-active[data-v-ec2bf3d2],.rm-draggable-icon__icon-label[data-v-ec2bf3d2]:hover{width:80px;background-color:#617ee7;color:#fff}.rm-draggable-icon__icon-img[data-v-ec2bf3d2]{width:30px;height:30px;border-radius:15px}.rm-draggable-icon__name[data-v-ec2bf3d2]{font-size:12px;margin-top:2px}</style><style type="text/css">.rm-draggable-icon__tip.is-light[x-placement^=top]{border:1px solid #eaebec!important}.rm-draggable-icon__tip.is-light[x-placement^=top]>.popper__arrow{border-top-color:#eaebec!important}.rm-draggable-icon__icon-container{width:30px;height:30px}.rm-draggable-icon__close-tips{transform-origin:center bottom;z-index:2004;display:block;margin-bottom:12px;position:absolute;top:-42px;min-width:72px;max-width:145px;padding:10px;width:160px;border-radius:4px;background:#fff;border:1px solid #eaebec;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;line-height:14.4px}.rm-draggable-icon__close-tips-zh{width:72px}.rm-draggable-icon__close-tips-en{width:145px}.rm-draggable-icon__close-btn-text{font-size:12px;font-weight:400;color:#000}.rm-draggable-icon__close-btn-arrow{border-width:6px;position:absolute;left:140px;top:35px;bottom:-6px;display:block;width:0;height:0;border-style:solid;border-color:transparent;border-top-color:#eaebec}.rm-draggable-icon__close-btn-arrow-en{left:140px}.rm-draggable-icon__close-btn-arrow-zh{left:74px}.rm-draggable-icon__close-btn-arrow:after{content:" ";border-width:5px;position:absolute;top:-6px;left:-5px;display:block;width:0;height:0;border-color:transparent;border-style:solid;border-top-color:#fff}</style></head>
+	<body class="page-header-fixed page-sidebar-closed-hide-logo" data-new-gr-c-s-check-loaded="14.1209.0" data-gr-ext-installed="">
+		
+
+<!-- Loading Icon -->
+<style>
+    /* CSS for the loading icon */
+    .loading-icon {
+        display: none; /* Initially hidden */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+</style>
+<div class="loading-icon">
+    <img src="../newicon/loadings.gif" alt="Loading..." style="width: 200px;">
+</div>
+
+<div class="page-header navbar navbar-fixed-top">
+	<div class="page-header-inner">
+		<div class="page-logo">
+			<img src="img/logo.png" alt="logo" class="logo-default" style="margin-top:5px; max-width:75px; width:100%; max-height: 75px;">
+			<div class="menu-toggler sidebar-toggler"></div>
+		</div>
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"><span></span></a>
+		<div class="page-top">
+			<div class="top-menu">
+				<ul class="nav navbar-nav pull-right">
+					<li class="dropdown dropdown-user dropdown-dark">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<span class="username username-hide-on-mobile">shine@notimonkey</span>
+							
+							<img alt="" class="img-circle" src="img/logo.png">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-default">
+							<li><a href="account.php"><i class="fa fa-lock"></i> Change Password </a></li>
+							<li><a href="profile.html"><i class="fa fa-info"></i> My Profile </a></li>
+							<li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout </a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>		<div class="page-container">
+			
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="page-sidebar-wrapper">
+	<div class="page-sidebar navbar-collapse collapse">
+		<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+			<li class="start  ">
+				<a href="profile.html"><img alt="" class="img-circle" src="img/admin.png" style="width:30px;"><span class="title" style="font-weight: bold;"> &nbsp; Shine Admin </span></a>
+			</li>
+			<br>
+			<li class="start active"><a href="dashboard.html"><i class="fa fa-home"></i><span class="title"> Dashboard </span></a></li>
+						<li class=" "><a href="user_list.html"><i class="fa fa-user-circle-o"></i><span class="title"> User List </span></a></li>
+						<li class=" "><a href="class.php"><i class="fa fa-users"></i><span class="title">Class List </span></a></li>
+						<li class=" "><a href="class_lesson_list.php"><i class="fa fa-users"></i><span class="title">Lesson List </span></a></li>
+									<li class=" "><a href="addi_service.php"><i class="fa fa-cogs"></i><span class="title">Additional Service </span></a></li>			
+			<li class=" "><a href="student.php"><i class="fa fa-graduation-cap"></i><span class="title">Student List </span></a></li>
+			<li class=" "><a href="announcement.php"><i class="fa fa-thumb-tack"></i><span class="title">Announcement </span></a></li>
+			<li class=" ">
+				<a href="javascript:;"><i class="fa fa-gift"></i><span class="title"> Gift</span><span class="arrow "></span></a>
+				<ul class="sub-menu">
+					<li class=" "><a href="master_product.php"><i class="fa fa-list"></i><span class="title">Master Products</span></a></li>
+					<li class=" "><a href="master_pickup.php"><i class="fa fa-calendar"></i><span class="title">Master PickUp</span></a></li>
+					<li class=" "><a href="orders.php"><i class="fa fa-shopping-cart"></i><span class="title">Orders List </span></a></li>
+				</ul>
+			</li>
+						<li class=" ">
+				<a href="javascript:;"><i class="fa fa-folder"></i><span class="title"> Enrollment</span><span class="arrow "></span></a>
+				<ul class="sub-menu">
+						<li class=" "><a href="enrollments.php"><i class="fa fa-folder"></i><span class="title">Enrollment List</span></a></li>
+			
+						<li class=" "><a href="setting.php"><i class="fa fa-cogs"></i><span class="title">Enrollment Setting</span></a></li>	
+				</ul>
+			</li>
+			<li class=" "><a href="setting_email.php"><i class="fa fa-cogs"></i><span class="title">Email Setting </span></a></li>
+									<li class=" "><a href="comment.php"><i class="fa fa-comments-o"></i><span class="title">Comment List </span></a></li>
+									<li class=" "><a href="report.php"><i class="fa fa-folder"></i><span class="title">Report List </span></a></li>
+												<li class="start "><a href="holiday.php"><i class="fa fa-calendar"></i><span class="title"> Holiday </span></a></li>
+									<li class="start "><a href="system-setting.php"><i class="fa fa-cogs"></i><span class="title"> System Setting </span></a></li>
+						<li class="last"><a href="logout.php"><i class="fa fa-sign-out"></i><span class="title"> Logout </span></a></li>
+		</ul>
+	</div>
+</div>
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<span class="caption-subject font-blue-madison bold uppercase">Change Account Password</span>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<form class="form-horizontal" name="password_form" method="POST">
+										<div class="form-body">
+											<div class="form-group">
+												<label class="col-md-3 control-label">Current Password <span class="required">* </span></label>
+												<div class="col-md-9">
+													<input type="password" class="form-control" name="password_current" id="password_current">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-3 control-label">New Password <span class="required" aria-required="true">* </span></label>
+												<div class="col-md-9">
+													<input type="password" class="form-control" name="password" id="password">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-3 control-label">Confirm Password <span class="required" aria-required="true">* </span></label>
+												<div class="col-md-9">
+													<input type="password" class="form-control" name="password2" id="password2">
+												</div>
+											</div>
+										</div>
+										<div class="form-actions">
+											<div class="row">
+												<div class="col-md-offset-3 col-md-9">
+													<button type="button" class="btn green" onclick="validateAndUpdatePassword()">Submit</button>
+												</div>
+											</div>
+										</div>
+									</form>
+									<p id="status-message" style="color: red; font-weight: bold;"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="script/login.js"></script>
+		</div>
+		<div class="page-footer">
+	<div class="page-footer-inner">Copyright © 2024 Shine Language House App. All Rights Reserved.</div>
+	<div class="scroll-to-top" style="display: none;"><i class="fa fa-arrow-circle-up" style="font-size: 30px;"></i></div>
+</div>		
+<script src="plugins/jquery.min.js" type="text/javascript"></script>
+<script src="plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="plugins/metronic.js" type="text/javascript"></script>
+<script src="plugins/layout.js" type="text/javascript"></script>
+<script src="plugins/components-pickers.js"></script>
+<script>
+	$(document).ready(function(){
+		Metronic.init();
+		Layout.init();
+        ComponentsPickers.init();
+	});
+
+
+	// Restricts input for the given textbox to the given inputFilter.
+	function setInputFilter(textbox, inputFilter) {
+		["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+		textbox.addEventListener(event, function() {
+			if (inputFilter(this.value)) {
+			this.oldValue = this.value;
+			this.oldSelectionStart = this.selectionStart;
+			this.oldSelectionEnd = this.selectionEnd;
+			} 
+			else if (this.hasOwnProperty("oldValue")) {
+				this.value = this.oldValue;
+				this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+			}
+			});
+		});
+	}
+</script>		<script>
+			function form_validation(){
+				if($("#password_current").val() != "" && $("#password").val() != "" && $("#password2").val() != ""){
+					if($("#password").val() == $("#password2").val()){
+						document.forms["password_form"].submit();
+					}
+					else{
+						alert("Password are not match");
+					}
+				}			
+				else{
+					alert("Please fill in the mandatory field");
+				}
+			}
+	   </script>
+	
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

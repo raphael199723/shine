@@ -1,0 +1,26 @@
+.dashboard-stat .details .number {
+			    padding-top: 0px;
+			    padding-bottom: 25px;
+			}
+
+			.page-content {
+			    border-left:1px solid #d8d8d8;
+			}
+			.portlet.light {
+				border:1px solid #d8d8d8;
+			}
+
+			.page-header.navbar {
+			    background: #FFFFFF;
+			    border-bottom: 10px solid #b7ffb0;
+			}
+
+			body {
+				background-color: white;
+			}
+.cke_notification_warning {
+    display: none;
+}
+#cke_47{
+ display:none;
+}

@@ -1,0 +1,804 @@
+<html lang="en"><head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta content="width=device-width, initial-scale=1.0" name="viewport"/>-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<!-- For iOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon_m/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Noti Monkeys">
+
+<!-- For Android -->
+<!-- For Android -->
+<script>
+    // Get the current URL
+    var currentURL = window.location.href;
+
+    // Create the web app manifest object
+    var manifest = {
+        "name": "Noti Monkeys",
+	    "short_name": "Noti Monkeys",
+	    "start_url": currentURL,
+	    "icons": [
+	        {
+	            "src": "images/android-chrome-192x192.png",
+	            "type": "image/png",
+	            "sizes": "192x192"
+	        }
+	    ],
+	    "theme_color": "#ffffff",
+	    "background_color": "#ffffff",
+	    "display": "standalone"
+    };
+
+    // Convert the manifest object to JSON string
+    var manifestString = JSON.stringify(manifest);
+
+    // Create a link element for the manifest
+    var manifestLink = document.createElement('link');
+    manifestLink.rel = 'manifest';
+    manifestLink.href = 'data:application/json,' + encodeURIComponent(manifestString);
+
+    // Append the link element to the head of the document
+    document.head.appendChild(manifestLink);
+</script><link rel="manifest" href="data:application/json,%7B%22name%22%3A%22Noti%20Monkeys%22%2C%22short_name%22%3A%22Noti%20Monkeys%22%2C%22start_url%22%3A%22https%3A%2F%2Fwww.notimonkeys.com%2Fmaster_panel%2Fdashboard.php%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22images%2Fandroid-chrome-192x192.png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22sizes%22%3A%22192x192%22%7D%5D%2C%22theme_color%22%3A%22%23ffffff%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22display%22%3A%22standalone%22%7D">
+<meta name="theme-color" content="#ffffff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Noti Monkeys">
+<link rel="icon" sizes="192x192" href="img/logo.png">
+<title>Shine Language House App</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/components-rounded.css" rel="stylesheet" type="text/css">
+<link href="css/plugins.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css?v=2" rel="stylesheet" type="text/css">
+<link href="css/light.css?v=2" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="img/favicon.png">
+<link href="css/layout_addon.css?v=2" rel="stylesheet" type="text/css">		<link href="plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css" rel="stylesheet" type="text/css">
+<link href="css/dataTables.colReorder.min.css" rel="stylesheet" type="text/css">
+<link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">	<style type="text/css">.rm-draggable-icon[data-v-ec2bf3d2]{position:absolute;right:0;z-index:999999999}.rm-draggable-icon__header[data-v-ec2bf3d2]{width:100%;display:flex;flex-direction:row;justify-content:flex-end;align-items:center;cursor:pointer}.rm-draggable-icon__close-btn[data-v-ec2bf3d2]{width:18px;height:18px;margin:0 0 2px 0}.rm-draggable-icon__main[data-v-ec2bf3d2]{cursor:pointer}.rm-draggable-icon__icon-label[data-v-ec2bf3d2]{display:flex;flex-direction:column;justify-content:center;align-items:center;width:60px;height:60px;border-top-left-radius:20px;border-bottom-left-radius:20px;background-color:#fff;text-align:center;box-shadow:0 2px 6px 1px rgba(0,0,0,.15);color:#0d1216;-moz-user-select:none;-webkit-user-select:none;user-select:none}.rm-draggable-icon__icon-label-active[data-v-ec2bf3d2],.rm-draggable-icon__icon-label[data-v-ec2bf3d2]:hover{width:80px;background-color:#617ee7;color:#fff}.rm-draggable-icon__icon-img[data-v-ec2bf3d2]{width:30px;height:30px;border-radius:15px}.rm-draggable-icon__name[data-v-ec2bf3d2]{font-size:12px;margin-top:2px}</style><style type="text/css">.rm-draggable-icon__tip.is-light[x-placement^=top]{border:1px solid #eaebec!important}.rm-draggable-icon__tip.is-light[x-placement^=top]>.popper__arrow{border-top-color:#eaebec!important}.rm-draggable-icon__icon-container{width:30px;height:30px}.rm-draggable-icon__close-tips{transform-origin:center bottom;z-index:2004;display:block;margin-bottom:12px;position:absolute;top:-42px;min-width:72px;max-width:145px;padding:10px;width:160px;border-radius:4px;background:#fff;border:1px solid #eaebec;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;line-height:14.4px}.rm-draggable-icon__close-tips-zh{width:72px}.rm-draggable-icon__close-tips-en{width:145px}.rm-draggable-icon__close-btn-text{font-size:12px;font-weight:400;color:#000}.rm-draggable-icon__close-btn-arrow{border-width:6px;position:absolute;left:140px;top:35px;bottom:-6px;display:block;width:0;height:0;border-style:solid;border-color:transparent;border-top-color:#eaebec}.rm-draggable-icon__close-btn-arrow-en{left:140px}.rm-draggable-icon__close-btn-arrow-zh{left:74px}.rm-draggable-icon__close-btn-arrow:after{content:" ";border-width:5px;position:absolute;top:-6px;left:-5px;display:block;width:0;height:0;border-color:transparent;border-style:solid;border-top-color:#fff}</style></head>
+	<body class="page-header-fixed page-sidebar-closed-hide-logo" data-new-gr-c-s-check-loaded="14.1209.0" data-gr-ext-installed="">
+		
+
+<!-- Loading Icon -->
+<style>
+    /* CSS for the loading icon */
+    .loading-icon {
+        display: none; /* Initially hidden */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+</style>
+<div class="loading-icon">
+    <img src="../newicon/loadings.gif" alt="Loading..." style="width: 200px;">
+</div>
+
+<div class="page-header navbar navbar-fixed-top">
+	<div class="page-header-inner">
+		<div class="page-logo">
+			<img src="img/logo.png" alt="logo" class="logo-default" style="margin-top:5px; max-width:75px; width:100%; max-height: 75px;">
+			<div class="menu-toggler sidebar-toggler"></div>
+		</div>
+		<!-- 引入 Bootstrap 3 和 jQuery -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/shine_mail.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="shine_mail.js"></script>
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"><span></span></a>
+		<div class="page-top">
+			<div class="top-menu">
+				<ul class="nav navbar-nav pull-right">
+					<li class="dropdown dropdown-user dropdown-dark">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<span class="username username-hide-on-mobile">shine@notimonkey</span>
+							
+							<img alt="" class="img-circle" src="img/logo.png">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-default">
+							<li><a href="account.html"><i class="fa fa-lock"></i> Change Password </a></li>
+							<li><a href="profile.html"><i class="fa fa-info"></i> My Profile </a></li>
+							<li><a href="login.html"><i class="fa fa-sign-out"></i> Logout </a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>		<div class="page-container">
+			
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="page-sidebar-wrapper">
+	<div class="page-sidebar navbar-collapse collapse">
+		<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+			<li class="start  ">
+				<a href="profile.html"><img alt="" class="img-circle" src="img/admin.png" style="width:30px;"><span class="title" style="font-weight: bold;"> &nbsp; Shine Admin </span></a>
+			</li>
+			<br>
+			<li class="start active"><a href="dashboard.html"><i class="fa fa-home"></i><span class="title"> Dashboard </span></a></li>
+						<li class=" "><a href="user_list.html"><i class="fa fa-user-circle-o"></i><span class="title"> User List </span></a></li>
+						<li class=" "><a href="class.php"><i class="fa fa-users"></i><span class="title">Class List </span></a></li>
+						<li class=" "><a href="class_lesson_list.php"><i class="fa fa-users"></i><span class="title">Lesson List </span></a></li>
+									<li class=" "><a href="addi_service.php"><i class="fa fa-cogs"></i><span class="title">Additional Service </span></a></li>			
+			<li class=" "><a href="student.php"><i class="fa fa-graduation-cap"></i><span class="title">Student List </span></a></li>
+			<li class=" "><a href="announcement.php"><i class="fa fa-thumb-tack"></i><span class="title">Announcement </span></a></li>
+			<li class=" ">
+				<a href="javascript:;"><i class="fa fa-gift"></i><span class="title"> Gift</span><span class="arrow "></span></a>
+				<ul class="sub-menu">
+					<li class=" "><a href="master_product.php"><i class="fa fa-list"></i><span class="title">Master Products</span></a></li>
+					<li class=" "><a href="master_pickup.php"><i class="fa fa-calendar"></i><span class="title">Master PickUp</span></a></li>
+					<li class=" "><a href="orders.php"><i class="fa fa-shopping-cart"></i><span class="title">Orders List </span></a></li>
+				</ul>
+			</li>
+						<li class=" ">
+				<a href="javascript:;"><i class="fa fa-folder"></i><span class="title"> Enrollment</span><span class="arrow "></span></a>
+				<ul class="sub-menu">
+						<li class=" "><a href="enrollments.php"><i class="fa fa-folder"></i><span class="title">Enrollment List</span></a></li>
+			
+						<li class=" "><a href="setting.php"><i class="fa fa-cogs"></i><span class="title">Enrollment Setting</span></a></li>	
+				</ul>
+			</li>
+			<li class=" "><a href="setting_email.php"><i class="fa fa-cogs"></i><span class="title">Email Setting </span></a></li>
+									<li class=" "><a href="comment.php"><i class="fa fa-comments-o"></i><span class="title">Comment List </span></a></li>
+									<li class=" "><a href="report.php"><i class="fa fa-folder"></i><span class="title">Report List </span></a></li>
+												<li class="start "><a href="holiday.php"><i class="fa fa-calendar"></i><span class="title"> Holiday </span></a></li>
+									<li class="start "><a href="system-setting.php"><i class="fa fa-cogs"></i><span class="title"> System Setting </span></a></li>
+						<li class="last"><a href="logout.php"><i class="fa fa-sign-out"></i><span class="title"> Logout </span></a></li>
+		</ul>
+	</div>
+</div>
+
+
+	<div class="page-content-wrapper">
+		<div class="page-content">
+
+
+
+		
+
+
+								<div class="note note-info">
+                        <b> Valid Until : 2025-04-06 </b>
+                        <br><b></b>
+                    </div>
+            
+            
+            		<div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <a class="dashboard-stat dashboard-stat-v2 red " style="height:150px; background-color: #ef9398;" href="report_studentpayment.php?statement_month=&amp;statement_year=&amp;payment_status=Unpaid">
+                                <div class="visual">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                </div>
+                                <div class="details">
+                                	<br>
+                                    <div class="desc">Total Unpaid Fees Up To Date</div>
+                                    <div class="number">
+                                        RM <span data-counter="counterup" data-value="2610">2,610.00</span>
+                                    </div>
+                                    <div class="desc"> Total Unpaid Students : 13</div> 
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <a class="dashboard-stat dashboard-stat-v2 blue" style="height:150px; background-color: #5291e1;" href="report_studentpayment.php?statement_month=11&amp;statement_year=2024&amp;payment_status=Paid">
+                                <div class="visual">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                </div>
+                                <div class="details">
+                                	<br>
+                                    <div class="desc"> Total Collected Fees for November</div>
+                                    <div class="number">
+                                        RM <span data-counter="counterup" data-value="9180">9,180.00</span>
+                                    </div>
+                                    <div class="desc"> Total Paid Students : 53</div> 
+                                </div>
+                            </a>
+                        </div>
+
+                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <a class="dashboard-stat dashboard-stat-v2 blue" style="height:150px; background-color: #5291e1;" href="report_studentpayment.php?from_date=01-11-2024&amp;to_date=30-11-2024&amp;payment_status=Paid">
+                                <div class="visual">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                </div>
+                                <div class="details">
+                                	<br>
+                                    <div class="desc"> Total Payments Received in November</div>
+                                    <div class="number">
+                                        RM <span data-counter="counterup" data-value="10200">10,200.00</span>
+                                    </div>
+                                    <div class="desc"> Total Paid Students : 56</div> 
+                                </div>
+                            </a>
+                        </div>
+
+
+
+                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <a class="dashboard-stat dashboard-stat-v2 blue" style="height:150px; background-color: #71cebb;" href="student.php">
+                                <div class="visual">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                </div>
+                                <div class="details">
+                                	<br>
+                                    <div class="desc"> Current Active Student </div>
+                                    <div class="number">
+                                        <span data-counter="counterup" data-value="68">68</span>
+                                    </div>
+                                                                        <div class="desc"> Student Limit : 100</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<span class="caption-subject font-blue-madison bold uppercase">Pending Verify Payment</span>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<div id="pending_listing_datatable_wrapper" class="dataTables_wrapper no-footer"><div class="row"><div class="col-md-6 col-sm-12"><div class="dataTables_length" id="pending_listing_datatable_length"><label> <select name="pending_listing_datatable_length" aria-controls="pending_listing_datatable" class="form-control input-xsmall input-inline"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> records </label></div></div><div class="col-md-6 col-sm-12"><div id="pending_listing_datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-small input-inline" placeholder="" aria-controls="pending_listing_datatable"></label></div></div></div><div class="table-scrollable"><table class="table table-striped table-bordered table-hover dataTable no-footer" id="pending_listing_datatable" role="grid" aria-describedby="pending_listing_datatable_info" style="width: 1563px;">
+										<thead>
+											<tr role="row"><td class="sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 98px;">Action</td><th class="sorting_desc" tabindex="0" aria-controls="pending_listing_datatable" rowspan="1" colspan="1" aria-sort="descending" aria-label="Student Name: activate to sort column ascending" style="width: 236px;">Student Name</th><th class="sorting" tabindex="0" aria-controls="pending_listing_datatable" rowspan="1" colspan="1" aria-label="Student's Number: activate to sort column ascending" style="width: 292px;">Student's Number</th><th class="sorting" tabindex="0" aria-controls="pending_listing_datatable" rowspan="1" colspan="1" aria-label="Monthly Statement: activate to sort column ascending" style="width: 304px;">Monthly Statement</th><th class="sorting" tabindex="0" aria-controls="pending_listing_datatable" rowspan="1" colspan="1" aria-label="Invoice Number: activate to sort column ascending" style="width: 260px;">Invoice Number</th><th class="sorting" tabindex="0" aria-controls="pending_listing_datatable" rowspan="1" colspan="1" aria-label="Amount (RM): activate to sort column ascending" style="width: 221px;">Amount (RM)</th></tr>
+										</thead>
+										<tbody>
+																					<tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">No data available in table</td></tr></tbody>
+									</table></div><div class="row"><div class="col-md-5 col-sm-12"><div class="dataTables_info" id="pending_listing_datatable_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-md-7 col-sm-12"><div class="dataTables_paginate paging_simple_numbers" id="pending_listing_datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="pending_listing_datatable" tabindex="0" id="pending_listing_datatable_previous"><a href="#"><i class="fa fa-angle-left"></i></a></li><li class="paginate_button next disabled" aria-controls="pending_listing_datatable" tabindex="0" id="pending_listing_datatable_next"><a href="#"><i class="fa fa-angle-right"></i></a></li></ul></div></div></div></div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+										
+
+                        <div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<span class="caption-subject font-blue-madison bold uppercase">Coming Classes</span>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<div id="class_listing_datatable_wrapper" class="dataTables_wrapper no-footer"><div class="row"><div class="col-md-6 col-sm-12"><div class="dataTables_length" id="class_listing_datatable_length"><label> <select name="class_listing_datatable_length" aria-controls="class_listing_datatable" class="form-control input-xsmall input-inline"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> records </label></div></div><div class="col-md-6 col-sm-12"><div id="class_listing_datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-small input-inline" placeholder="" aria-controls="class_listing_datatable"></label></div></div></div><div class="table-scrollable"><table class="table table-striped table-bordered table-hover dataTable no-footer" id="class_listing_datatable" role="grid" aria-describedby="class_listing_datatable_info">
+										<thead>
+											<tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="width: 216px;">Action</th><th class="sorting" tabindex="0" aria-controls="class_listing_datatable" rowspan="1" colspan="1" aria-label="Branch: activate to sort column ascending" style="width: 262px;">Branch</th><th class="sorting" tabindex="0" aria-controls="class_listing_datatable" rowspan="1" colspan="1" aria-label="Class Name: activate to sort column ascending" style="width: 382px;">Class Name</th><th class="sorting" tabindex="0" aria-controls="class_listing_datatable" rowspan="1" colspan="1" aria-label="Days: activate to sort column ascending" style="width: 205px;">Days</th><th class="sorting_asc" tabindex="0" aria-controls="class_listing_datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="From: activate to sort column ascending" style="width: 211px;">From</th><th class="sorting" tabindex="0" aria-controls="class_listing_datatable" rowspan="1" colspan="1" aria-label="To: activate to sort column ascending" style="width: 136px;">To</th></tr>
+										</thead>
+										<tbody>
+																					<tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">No data available in table</td></tr></tbody>
+									</table></div><div class="row"><div class="col-md-5 col-sm-12"><div class="dataTables_info" id="class_listing_datatable_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-md-7 col-sm-12"><div class="dataTables_paginate paging_simple_numbers" id="class_listing_datatable_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="class_listing_datatable" tabindex="0" id="class_listing_datatable_previous"><a href="#"><i class="fa fa-angle-left"></i></a></li><li class="paginate_button next disabled" aria-controls="class_listing_datatable" tabindex="0" id="class_listing_datatable_next"><a href="#"><i class="fa fa-angle-right"></i></a></li></ul></div></div></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+              
+
+							<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<span class="caption-subject font-blue-madison bold uppercase"> Dashboard - Payment Tracker Branch Admin</span>
+									</div>
+
+									<div style="float: right;">
+										<button type="button" onclick="student_search()" class="btn green">Search By Student</button>
+										<button style="color:black;" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="fa fa-android" aria-hidden="true"> (T)</i></button>
+										<button style="color:black;" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2"><i class="fa fa-android" aria-hidden="true"> (S)</i></button>
+									</div>
+									
+								</div>
+								<div class="portlet-body">
+		
+									<form class="form-horizontal" name="search_form" method="GET">
+										<div class="form-body">
+
+											<div class="row">
+											
+
+												<div class="col-sm-6 col-md-6">
+													<div class="form-group">
+														<div class="col-md-12">
+															<select class="form-control" name="month" id="month">
+																<option value="">Select Month * </option>
+																<option value="01">01 (January)</option>
+																<option value="02">02 (February)</option>
+																<option value="03">03 (March)</option>
+																<option value="04">04 (April)</option>
+																<option value="05">05 (May)</option>
+																<option value="06">06 (June)</option>
+																<option value="07">07 (July)</option>
+																<option value="08">08 (August)</option>
+																<option value="09">09 (September)</option>
+																<option value="10">10 (October)</option>
+																<option value="11">11 (November)</option>
+																<option value="12">12 (December)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												
+
+												
+												<div class="col-sm-6 col-md-6">
+													<div class="form-group">
+														<div class="col-md-12">
+															<select class="form-control" name="year" id="year">
+																<option value="">Select Year *</option>	
+																<option value="3024">3024</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="0924">0924</option><option value="0724">0724</option><option value="0324">0324</option>															</select>
+														</div>
+													</div>
+												</div>
+												
+												
+
+												<div class="col-sm-6 col-md-6">
+													<div class="form-group">
+														<div class="col-md-12">
+															<select id="class" name="class" class="form-control">
+																<option value="">All</option><option value="463">STD 2 BUKU TEKS MON</option><option value="464">Bina Ayat - Tuesday (Cindy)</option><option value="465">STD 4 MATHS</option><option value="466">STD 5 MATHS</option><option value="1392">Adrianna</option><option value="468">KARANGAN - CINDY</option><option value="469">STD 2 MATHS</option><option value="470">BINA AYAT - THURS (PE)</option><option value="1393">Audrey 1 to 1</option><option value="472">STD 3 BUKU TEKS</option><option value="474">STD 3 MATHS</option><option value="475">Daniel’s 1 to 1 (Buku teks + Bina Ayat)</option><option value="479">WAHEEDA 1 TO 1 BUKU TEKS</option><option value="480">DAYYAN 1 TO 1 STORYBOOK</option><option value="481">QALEESYA 1 TO 1 MATHS STD 2</option><option value="482">QALEESYA 1 TO 1 BUKU TEKS</option><option value="485">STD 2 BUKU TEKS TUES</option><option value="486">AMNIE 1 TO 1 PEMAHAMAN</option><option value="487">AMMAR 1 TO 1 PEMAHAMAN</option><option value="489">STD 1 BUKU TEKS - THURS</option><option value="777">YCT 1 TO 2</option><option value="1351">Alaenna 1 to 1</option><option value="593">KARANGAN - YJ</option><option value="595">STD 2 SCIENCE</option><option value="597">STD 4 SCIENCE</option><option value="600">STD 4 SEJARAH</option><option value="607">STD 5 SEJARAH</option><option value="642">STD 3 SCIENCE</option><option value="1364">Sharyna 1 to 1</option><option value="885">Hayden 1 to 1</option><option value="1178">Pre STD 1 2025</option><option value="1365">Avalyn 1 To 1</option><option value="1366">Fufu 1 to 1</option><option value="1369">Clarice 1 to 1</option>															    
+															</select>
+															
+														</div>
+													</div>
+												</div>
+
+												<div class="col-sm-6 col-md-6">
+													<div class="form-group">
+														<div class="col-md-12">
+															<select id="pay_status" name="pay_status" class="form-control">
+																<option value="Paid">Paid</option><option value="Unpaid">Unpaid</option>															    
+															</select>
+															
+														</div>
+													</div>
+												</div>
+
+											
+
+
+												<div class="col-sm-6 col-md-6">
+													<div class="form-group">
+														<div class="col-md-12">
+															<button type="button" onclick="form_search()" class="btn green">Search</button>
+															<button type="button" class="btn btn-primary" onclick="window.location = 'dashboard.php'">Reset</button>
+														</div>
+
+													</div>
+												</div>
+												
+											</div>
+
+
+
+
+										
+
+										
+
+											
+
+												
+											</div>
+										</form></div>
+									
+
+									<hr>
+									<div class="row">
+                        			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+									<span class="dashboard-stat dashboard-stat-v2 red " style="background-color: #666666;">
+									   <div class="visual">
+		                                    <i class="fa fa-bar-chart-o"></i>
+		                                </div>
+		                                <div class="details">
+		                                	<br>
+		                                    <div class="desc"> Total Amount </div>
+		                                    <div class="number">
+		                                        <span data-counter="counterup">RM <span id="totalamount_check">0.00</span></span>
+		                                    </div>
+		                                </div>
+		                              </span></div></div>
+
+													</div>
+							</div>
+						</div>
+					</div>
+
+		
+
+
+					
+				</div>
+			</div>
+		
+
+
+
+
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4 class="modal-title">Teacher Android APK</h4>
+        </div>
+        <div class="modal-body">       
+          <center>
+          	<img src="img/slamaster.png" class="responsive"><br>
+            <a href="https://www.notimonkeys.com/apk/sla_master.apk">Apk Link</a>
+           </center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4 class="modal-title">Student Android APK</h4>
+        </div>
+        <div class="modal-body">       
+          <center>
+          	<img src="img/slastudent.png" class="responsive"><br>
+            <a href="https://www.notimonkeys.com/apk/sla_student.apk">Apk Link</a>
+           </center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+		<div class="page-footer">
+	<div class="page-footer-inner">Copyright © 2024 Shine Language House App. All Rights Reserved.</div>
+	<div class="scroll-to-top" style="display: none;"><i class="fa fa-arrow-circle-up" style="font-size: 30px;"></i></div>
+</div>		
+<script src="plugins/jquery.min.js" type="text/javascript"></script>
+<script src="plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="plugins/jquery-ui.min.js" type="text/javascript"></script>
+<script src="plugins/bootstrap.min.js" type="text/javascript"></script>
+<script src="plugins//bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="plugins/metronic.js" type="text/javascript"></script>
+<script src="plugins/layout.js" type="text/javascript"></script>
+<script src="plugins/components-pickers.js"></script>
+<script>
+	$(document).ready(function(){
+		Metronic.init();
+		Layout.init();
+        ComponentsPickers.init();
+	});
+
+
+	// Restricts input for the given textbox to the given inputFilter.
+	function setInputFilter(textbox, inputFilter) {
+		["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+		textbox.addEventListener(event, function() {
+			if (inputFilter(this.value)) {
+			this.oldValue = this.value;
+			this.oldSelectionStart = this.selectionStart;
+			this.oldSelectionEnd = this.selectionEnd;
+			} 
+			else if (this.hasOwnProperty("oldValue")) {
+				this.value = this.oldValue;
+				this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+			}
+			});
+		});
+	}
+</script>		
+<script src="plugins/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="plugins/datatables/dataTables.tableTools.min.js" type="text/javascript"></script>
+<script src="plugins/datatables/dataTables.colReorder.min.js" type="text/javascript"></script>
+<script src="plugins/datatables/dataTables.scroller.min.js" type="text/javascript"></script>
+<script src="plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>		
+		<script>
+			$("#totalamount_check").html("0.00");
+		</script>
+
+		<script>
+			$(document).ready(function(){    
+				var table = $('#user_listing_datatable').dataTable({
+					"pageLength": 10,
+					"bLengthChange": true, 
+					"order": [[1, 'desc']],
+					"bStateSave": false,
+					"columnDefs": [
+						{ "width": "6%", "targets": 0 },
+						{ "width": "15%", "targets": 2 },
+					    { "width": "40%", "targets": 5 },
+					  ],
+					"aoColumns": [ 
+						{ "bSortable": false, "bSearchable": false },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },						
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },						
+						{ "bSortable": true, "bSearchable": true },								
+						{ "bSortable": true, "bSearchable": true }
+					]
+				});
+			});
+
+
+	   </script>
+	   <script>
+	   		function form_search(){
+				if($("#year").val() != "" && $("#month").val() != ""){
+					
+						document.forms["search_form"].submit();
+					
+				}			
+				else{
+					alert("Please select month and year .");
+				}
+
+			}
+
+			function student_view(id){
+				 window.location= 'student_payment.php?id='+ id;	
+			}
+
+			function student_search(id){
+			   window.location= 'dashboard-search.php';	
+			}
+
+
+			function incrementValue(e) {
+			  e.preventDefault();
+			  var fieldName = $(e.target).data('field');
+			  var parent = $(e.target).closest('div');
+			  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+			  if (!isNaN(currentVal)) {
+			    parent.find('input[name=' + fieldName + ']').val(currentVal + 10);
+			  } else {
+			    parent.find('input[name=' + fieldName + ']').val(0);
+			  }
+			}
+
+			function decrementValue(e) {
+			  e.preventDefault();
+			  var fieldName = $(e.target).data('field');
+			  var parent = $(e.target).closest('div');
+			  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+			  if (!isNaN(currentVal) && currentVal > 0) {
+			    parent.find('input[name=' + fieldName + ']').val(currentVal - 10);
+			  } else {
+			    parent.find('input[name=' + fieldName + ']').val(0);
+			  }
+			}
+
+			$('.input-group').on('click', '.button-plus', function(e) {
+			  incrementValue(e);
+			});
+
+			$('.input-group').on('click', '.button-minus', function(e) {
+			  decrementValue(e);
+			});
+
+			function form_star(){
+				if($("#description").val() != ""  && $("#type").val() != "" && $("#point").val() != "" ){
+						document.forms["star_form"].submit();
+				}			
+				else{
+					alert("Please fill in the mandatory field");
+				}
+			}
+
+
+			
+	   </script>
+
+
+	   <style type="text/css">
+	   	input,
+		textarea {
+		  border: 1px solid #eeeeee;
+		  box-sizing: border-box;
+		  margin: 0;
+		  outline: none;
+		  padding: 10px;
+		}
+
+		input[type="button"] {
+		  -webkit-appearance: button;
+		  cursor: pointer;
+		}
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+		  -webkit-appearance: none;
+		}
+
+		.input-group {
+		  clear: both;
+		  position: relative;
+		}
+
+		.input-group input[type='button'] {
+		  background-color: #eeeeee;
+		  min-width: 38px;
+		  width: auto;
+		  transition: all 300ms ease;
+		}
+
+		.input-group .button-minus,
+		.input-group .button-plus {
+		  font-weight: bold;
+		  height: 38px;
+		  padding: 0;
+		  width: 38px;
+		  position: relative;
+		}
+
+		.input-group .quantity-field {
+		  position: relative;
+		  height: 38px;
+		  left: -6px;
+		  text-align: center;
+		  width: 62px;
+		  display: inline-block;
+		  font-size: 13px;
+		  margin: 0 0 5px;
+		  resize: vertical;
+		}
+
+		.button-plus {
+		  left: -13px;
+		}
+
+		input[type="number"] {
+		  -moz-appearance: textfield;
+		  -webkit-appearance: none;
+		}
+
+
+	   </style>
+
+	   <script type="text/javascript">
+	   	function copyDivContent(divId) {
+		  // Get the HTML content of the div element
+		  var divContent = document.getElementById(divId).value;
+		  
+		  // Create a temporary textarea element and set its value to the div content
+		  var tempTextarea = document.createElement("textarea");
+		  tempTextarea.value = divContent;
+		  
+		  // Add the textarea element to the DOM
+		  document.body.appendChild(tempTextarea);
+		  
+		  // Select the textarea's contents and copy them to the clipboard
+		  tempTextarea.select();
+		  document.execCommand("copy");
+		  
+		  // Remove the temporary textarea from the DOM
+		  document.body.removeChild(tempTextarea);
+
+		  autoDismissAlert("Message Copied!", 1000); // Display the alert for 3 seconds
+
+		}
+
+		function autoDismissAlert(message, timeout) {
+		  // Show the alert message
+		  window.alert(message);
+		  
+		  // Dismiss the alert message after the specified timeout
+		  setTimeout(function() {
+		    var alertBox = document.querySelector(".alert");
+		    alertBox.style.display = "none";
+		  }, timeout);
+		}
+
+
+			$(document).ready(function(){    
+				var table = $('#class_listing_datatable').dataTable({
+					"pageLength": 10,
+					"bLengthChange": true, 
+					"order": [[4, 'asc']],
+					"bStateSave": false,
+					"aoColumns": [ 
+						{ "bSortable": false, "bSearchable": false },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true }
+					]
+				});
+			});
+
+			function class_attendance(id){
+				window.location = 'class_attendance_list.php?id=' + id;
+			}
+
+			$(document).ready(function(){    
+				var table = $('#pending_listing_datatable').dataTable({
+					"pageLength": 10,
+					"bLengthChange": true, 
+					"order": [[1, 'desc']],
+					"bStateSave": false,
+					"aoColumns": [ 
+						{ "bSortable": false, "bSearchable": false },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true }
+					]
+				});
+			});
+
+			function py_edit(id){
+				window.location = 'student_payment_edit.php?id=' + id;
+			}
+	   </script>
+
+	   <script type="text/javascript">
+			function info_view(id,sid){
+				window.open('class_lesson_detail_view.php?id=' + id + '&sid=' +sid);
+			}
+					
+			$(document).ready(function(){    
+				var table = $('#homework_listing_datatable').dataTable({
+					"pageLength": 10,
+					"bLengthChange": true, 
+					"order": [[1, 'desc']],
+					"bStateSave": false,
+					"aoColumns": [ 
+						{ "bSortable": false, "bSearchable": false },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },	
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },
+						{ "bSortable": true, "bSearchable": true },						
+						{ "bSortable": true, "bSearchable": true }
+					]
+				});
+			});
+		</script>
+
+		
+	
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

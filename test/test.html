@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Add New User</h2>
+    <form id="addUserForm">
+        <div class="form-group">
+            <label for="account_name">Name</label>
+            <input type="text" class="form-control" id="account_name" name="account_name" required>
+        </div>
+        <div class="form-group">
+            <label for="account_username">Email</label>
+            <input type="email" class="form-control" id="account_username" name="account_username" required>
+        </div>
+        <div class="form-group">
+            <label for="account_contact">Contact No</label>
+            <input type="text" class="form-control" id="account_contact" name="account_contact" required>
+        </div>
+        <div class="form-group">
+            <label for="account_password">Password</label>
+            <input type="password" class="form-control" id="account_password" name="account_password" required>
+        </div>
+        <div class="form-group">
+            <label for="account_password2">Confirm Password</label>
+            <input type="password" class="form-control" id="account_password2" name="account_password2" required>
+        </div>
+        <div class="form-group">
+            <label for="account_type">Designation</label>
+            <select class="form-control" id="account_type" name="account_type" required>
+                <option value="Teacher">Teacher</option>
+                <option value="Branch Admin">Branch Admin</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="account_gender">Gender</label>
+            <select class="form-control" id="account_gender" name="account_gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <h2 class="mt-5">User List</h2>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Actions</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Designation</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="userTable">
+        <!-- 用戶列表會動態加載 -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // 表單提交
+        $("#addUserForm").submit(function (e) {
+            e.preventDefault();
+
+            // 驗證密碼是否匹配
+            const password = $("#account_password").val();
+            const confirmPassword = $("#account_password2").val();
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // 發送 AJAX 請求
+            $.ajax({
+                url: 'add_user.php', // 後端 API 地址
+                type: 'POST',
+                data: new FormData(this),
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.error) {
+                        alert(response.error);
+                    } else {
+                        // 更新用戶列表
+                        addNewUserToTable(response);
+                        alert("User added successfully!");
+                    }
+                },
+                error: function () {
+                    alert("An error occurred. Please try again.");
+                }
+            });
+        });
+
+        // 動態更新用戶列表
+        function addNewUserToTable(user) {
+            const newRow = `
+                <tr>
+                    <td>
+                        <button class="btn btn-success" onclick="editUser(${user.id})">Edit</button>
+                        <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
+                    </td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.contact}</td>
+                    <td>${user.designation}</td>
+                    <td>${user.account_type}</td>
+                </tr>
+            `;
+            $("#userTable").append(newRow);
+        }
+    });
+</script>
+</body>
+</html>
